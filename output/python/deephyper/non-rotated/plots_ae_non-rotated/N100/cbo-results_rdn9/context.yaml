@@ -1,0 +1,113 @@
+calls:
+- max_evals: 5
+  timeout: null
+search:
+  acq_func: UCB
+  acq_optimizer: auto
+  evaluator: NA
+  filter_duplicated: true
+  filter_failures: mean
+  initial_point_generator: random
+  initial_points:
+  - batch_size: 8
+    beta: 0.0001
+    decay_rate: 0.999
+    decay_rate_steps: 1
+    dense_width: 128
+    latent_dim: 32
+    learning_rate: 0.001
+  kappa: 1.96
+  kwargs: {}
+  log_dir: ../output/python/deephyper/non-rotated/plots_ae_non-rotated/N100/cbo-results_rdn9
+  max_failures: 100
+  moo_lower_bounds: null
+  moo_scalarization_strategy: Chebyshev
+  moo_scalarization_weight: null
+  multi_point_strategy: cl_max
+  n_initial_points: 10
+  n_jobs: 1
+  n_points: 10000
+  objective_scaler: auto
+  problem:
+    conditions: []
+    forbiddens: []
+    hyperparameters:
+    - default: 8
+      name: batch_size
+      sequence:
+      - 2
+      - 4
+      - 6
+      - 8
+      - 16
+      type: ordinal
+    - default: 0.0001
+      name: beta
+      sequence:
+      - 1.0e-09
+      - 1.0e-08
+      - 1.0e-07
+      - 1.0e-06
+      - 1.0e-05
+      - 0.0001
+      - 0.001
+      - 0.01
+      - 0.1
+      - 1
+      - 10
+      type: ordinal
+    - default: 0.999
+      log: true
+      lower: 1.0e-05
+      name: decay_rate
+      type: uniform_float
+      upper: 1.0
+    - default: 1
+      name: decay_rate_steps
+      sequence:
+      - 1
+      - 11
+      - 21
+      - 31
+      - 41
+      - 51
+      - 61
+      - 71
+      - 81
+      - 91
+      type: ordinal
+    - default: 128
+      name: dense_width
+      sequence:
+      - 32
+      - 64
+      - 128
+      - 256
+      type: ordinal
+    - default: 32
+      name: latent_dim
+      sequence:
+      - 16
+      - 32
+      - 64
+      - 128
+      - 256
+      type: ordinal
+    - default: 0.001
+      log: true
+      lower: 1.0e-05
+      name: learning_rate
+      type: uniform_float
+      upper: 0.01
+    json_format_version: 0.3
+    python_module_version: 0.5.0
+  random_state: 42
+  scheduler: null
+  stopper: null
+  surrogate_model: RF
+  sync_communication: false
+  type: CBO
+  update_prior: false
+  update_prior_quantile: 0.1
+  verbose: 0
+  xi: 0.001
