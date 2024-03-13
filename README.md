@@ -6,5 +6,5 @@ This repository contains code to replicate the results of the paper [Data-Effici
 
 The following are the experiments performed in the paper:
 
-- [Results_1](https://github.com/AnirbanSamaddar/CAE-VIB/tree/main/Results_1): This demonstrates the training of the DeepHyper augmented CAE-VIB method and generates the plots of Sec. 4.1.
-- [Results_2](https://github.com/AnirbanSamaddar/CAE-VIB/tree/main/Results_2): This demonstrates calculating the pixel importance presented in Sec. 4.3 and generates the plots.
+- [Results_1](https://github.com/AnirbanSamaddar/CAE-VIB/tree/main/Results_1/VIB_hpo_ae2d_eval-single-seed.ipynb): This demonstrates the training of the DeepHyper augmented CAE-VIB method and generates the plots of Sec. 4.1.
+- [Results_2](https://github.com/AnirbanSamaddar/CAE-VIB/blob/main/Results_2/VIB_hpo_ae2d_pixel-importance.ipynb): This demonstrates calculating the pixel importance presented in Sec. 4.3 and generates the plots.
